@@ -1,0 +1,11 @@
+{
+  "name": "task_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generateTits": "node textGen.js"
+  },
+  "author": "abdulov001@gmail.com",
+  "license": "ISC"
+}
