@@ -1,13 +1,11 @@
 void process() {
-    println("stage - read");
     def text = new File('/home/ais/projects/algorithms/task_2/text.txt').text;
-    println("stage - parse");
     def titsMap = text.findAll(/\(*\.\)\(.\)*/);
     def res = [:];
 
-    println("stage - format");
     titsMap.sort().each { tits ->
-        if (tits.findAll(/\(/).size() == tits.findAll(/\)/).size())
+        def size = tits.split(/\./);
+        if (size[0].size() == size[2].size())
             if (res[tits])
                 res[tits] = res[tits] + 1;
             else

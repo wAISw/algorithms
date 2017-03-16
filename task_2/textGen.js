@@ -58,7 +58,7 @@ const append = () => {
     if (!err) {
       let size = getFilesize(fname);
       i++;
-      if (i < 10000)
+      if (size < 1000)
         append();
     }
   });
